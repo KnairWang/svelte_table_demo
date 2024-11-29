@@ -1,7 +1,7 @@
-interface TableDatas {
+interface TableData {
   fields: TableField[],
   shape: TableShape,
-  data: TableData[],
+  data: TableDataRow[],
 };
 
 interface TableField {
@@ -11,4 +11,4 @@ interface TableField {
 
 type TableShape = [number, number];
 
-type TableData = Record<string, any>;
+type TableDataRow = Record<string, any>;

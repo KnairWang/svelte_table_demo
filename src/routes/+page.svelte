@@ -11,7 +11,7 @@
 
   let { data }: { data: PageData } = $props();
 
-  let tableData: TableDatas = $state({ fields: [], shape: [0, 0], data: [] });
+  let tableData: TableData = $state({ fields: [], shape: [0, 0], data: [] });
 
   let add = async () => {
     const response = await fetch("./api/test", {
@@ -32,7 +32,7 @@
       {#each tableData.fields as field}
         <TableHeadCell>
           <div>{field.name}</div>
-          <div>{field.dtype}</div>
+          <div>({field.dtype})</div>
         </TableHeadCell>
       {/each}
     </TableHead>
