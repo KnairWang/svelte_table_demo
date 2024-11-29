@@ -37,9 +37,9 @@
       {/each}
     </TableHead>
     <TableBody>
-      {#each { length: tableData.shape[1] } as _, row}
+      {#each { length: tableData.shape[0] } as _, row}
         <TableBodyRow>
-          {#each { length: tableData.shape[0] } as _, column}
+          {#each { length: tableData.shape[1] } as _, column}
             <TableBodyCell>
               {tableData.data[row][tableData.fields[column].name]}
             </TableBodyCell>
